@@ -130,8 +130,6 @@
   color: var(--color-stone-900);
 }
 
-.card__nutrition-list {
-}
 
 .card__nutrition-item {
   display: grid;
