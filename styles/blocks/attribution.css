@@ -1,0 +1,11 @@
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  padding-block: 10px;
+  color: var(--color-white);
+  background-color: var(--color-rose-800);
+}
+
+.attribution a {
+  color: var(--color-rose-50);
+}
