@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./styles/main.css" />
   <title>Frontend Mentor | Recipe page</title>
 </head>
 
@@ -16,6 +15,7 @@
     Coded by <a href="https://github.com/DmitriyStupin">Dmitry Stupin</a>.
   </div>
 
+  <!-- Готовый рецепт -->
   <div class="card">
     <img src="./assets/images/image-omelette.jpeg" alt="" class="card__preview" width="664" height="290">
     <div class="card__info">
@@ -27,15 +27,9 @@
       <div class="card__preparation">
         <h2 class="card__preparation-title">Preparation time</h2>
         <ul class="card__preparation-list">
-          <li class="card__preparation-item">
-            <strong>Total:</strong> Approximately 10 minutes
-          </li>
-          <li class="card__preparation-item">
-            <strong>Preparation:</strong> 5 minutes
-          </li>
-          <li class="card__preparation-item">
-            <strong>Cooking:</strong> 5 minutes
-          </li>
+          <li class="card__preparation-item"><strong>Total:</strong> Approximately 10 minutes</li>
+          <li class="card__preparation-item"><strong>Preparation:</strong> 5 minutes</li>
+          <li class="card__preparation-item"><strong>Cooking:</strong> 5 minutes</li>
         </ul>
       </div>
       <div class="card__ingredients">
@@ -51,59 +45,129 @@
       <div class="card__instructions">
         <h2 class="card__instructions-title">Instructions</h2>
         <ol class="card__instructions-list">
-          <li class="card__instructions-item">
-            <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well
-            mixed.
-            You can add a tablespoon of water or milk for a fluffier texture.
-          </li>
-          <li class="card__instructions-item">
-            <strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.
-          </li>
-          <li class="card__instructions-item">
-            <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan
-            to ensure
-            the eggs evenly coat the surface.
-          </li>
-          <li class="card__instructions-item">
-            <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly
-            runny in the
-            middle, sprinkle your chosen fillings over one half of the omelette.
-          </li>
-          <li class="card__instructions-item">
-            <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over
-            the
-            fillings. Let it cook for another minute, then slide it onto a plate.
-          </li>
-          <li class="card__instructions-item">
-            <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed.
-          </li>
+          <li class="card__instructions-item"><strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until well mixed.</li>
+          <li class="card__instructions-item"><strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.</li>
+          <li class="card__instructions-item"><strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure even coating.</li>
+          <li class="card__instructions-item"><strong>Add fillings (optional):</strong> When eggs set at edges but still runny in middle, add fillings to one half.</li>
+          <li class="card__instructions-item"><strong>Fold and serve:</strong> Fold the omelette over fillings. Cook another minute, then slide onto plate.</li>
+          <li class="card__instructions-item"><strong>Enjoy:</strong> Serve hot, with extra salt and pepper if needed.</li>
         </ol>
       </div>
       <div class="card__nutrition">
         <h2 class="card__nutrition-title">Nutrition</h2>
-        <p class="card__nutrition-description">The table below shows nutritional values per serving without the
-          additional fillings.</p>
+        <p class="card__nutrition-description">The table below shows nutritional values per serving without the additional fillings.</p>
         <dl class="card__nutrition-list">
-          <div class="card__nutrition-item">
-            <dt class="card__nutrition-name">Calories</dt>
-            <dd class="card__nutrition-value">277kcal</dd>
-          </div>
-          <div class="card__nutrition-item">
-            <dt class="card__nutrition-name">Carbs</dt>
-            <dd class="card__nutrition-value">0g</dd>
-          </div>
-          <div class="card__nutrition-item">
-            <dt class="card__nutrition-name">Protein</dt>
-          <dd class="card__nutrition-value">20g</dd>
-          </div>
-          <div class="card__nutrition-item">
-            <dt class="card__nutrition-name">Fat</dt>
-          <dd class="card__nutrition-value">22g</dd>
-          </div>
+          <div class="card__nutrition-item"><dt class="card__nutrition-name">Calories</dt><dd class="card__nutrition-value">277kcal</dd></div>
+          <div class="card__nutrition-item"><dt class="card__nutrition-name">Carbs</dt><dd class="card__nutrition-value">0g</dd></div>
+          <div class="card__nutrition-item"><dt class="card__nutrition-name">Protein</dt><dd class="card__nutrition-value">20g</dd></div>
+          <div class="card__nutrition-item"><dt class="card__nutrition-name">Fat</dt><dd class="card__nutrition-value">22g</dd></div>
         </dl>
       </div>
     </div>
   </div>
-</body>
 
+  <!-- Кнопка добавления рецепта -->
+  <div style="max-width: 700px; margin: 30px auto; padding: 20px; border: 1px solid #ccc;">
+
+    <div id="recipeForm" class="hidden">
+      <input type="text" id="title" placeholder="Recipe Title">
+      <textarea id="desc" placeholder="Description"></textarea>
+      <input type="file" id="image" accept="image/*">
+      <input type="number" id="imgWidth" placeholder="Image width (e.g. 664)">
+      <input type="number" id="imgHeight" placeholder="Image height (e.g. 290)">
+      <input type="text" id="prepTotal" placeholder="Total time">
+      <input type="text" id="prepPrep" placeholder="Preparation time">
+      <input type="text" id="prepCook" placeholder="Cooking time">
+      <textarea id="ingredients" placeholder="Ingredients (one per line)"></textarea>
+      <textarea id="instructions" placeholder="Instructions (one per line)"></textarea>
+      <input type="text" id="calories" placeholder="Calories">
+      <input type="text" id="carbs" placeholder="Carbs">
+      <input type="text" id="protein" placeholder="Protein">
+      <input type="text" id="fat" placeholder="Fat">
+      <button onclick="addRecipe()">✅ Добавить</button>
+    </div>
+  </div>
+
+  <script>
+function addRecipe() {
+  const title = document.getElementById('title').value;
+  const desc = document.getElementById('desc').value;
+  const img = document.getElementById('image').files[0];
+  const width = document.getElementById('imgWidth').value || 664;
+  const height = document.getElementById('imgHeight').value || 290;
+  const reader = new FileReader();
+
+  reader.onload = function(e) {
+    const imageData = e.target.result;
+    const prepTotal = document.getElementById('prepTotal').value;
+    const prepPrep = document.getElementById('prepPrep').value;
+    const prepCook = document.getElementById('prepCook').value;
+    const ingredients = document.getElementById('ingredients').value.trim().split('\n');
+    const instructions = document.getElementById('instructions').value.trim().split('\n');
+    const calories = document.getElementById('calories').value;
+    const carbs = document.getElementById('carbs').value;
+    const protein = document.getElementById('protein').value;
+    const fat = document.getElementById('fat').value;
+
+    const newCard = document.createElement('div');
+    newCard.className = 'card';
+    newCard.innerHTML = `
+      <img src="${imageData}" class="card__preview" width="${width}" height="${height}">
+      <div class="card__info">
+        <h1 class="card__title">${title}</h1>
+        <div class="card__description"><p>${desc}</p></div>
+        <div class="card__preparation">
+          <h2 class="card__preparation-title">Preparation time</h2>
+          <ul class="card__preparation-list">
+            <li class="card__preparation-item"><strong>Total:</strong> ${prepTotal}</li>
+            <li class="card__preparation-item"><strong>Preparation:</strong> ${prepPrep}</li>
+            <li class="card__preparation-item"><strong>Cooking:</strong> ${prepCook}</li>
+          </ul>
+        </div>
+        <div class="card__ingredients">
+          <h2 class="card__ingredients-title">Ingredients</h2>
+          <ul class="card__ingredients-list">
+            ${ingredients.map(i => `<li class="card__ingredients-item">${i}</li>`).join('')}
+          </ul>
+        </div>
+        <div class="card__instructions">
+          <h2 class="card__instructions-title">Instructions</h2>
+          <ol class="card__instructions-list">
+            ${instructions.map(i => `<li class="card__instructions-item">${i}</li>`).join('')}
+          </ol>
+        </div>
+        <div class="card__nutrition">
+          <h2 class="card__nutrition-title">Nutrition</h2>
+          <p class="card__nutrition-description">The table below shows nutritional values per serving.</p>
+          <dl class="card__nutrition-list">
+            <div class="card__nutrition-item"><dt class="card__nutrition-name">Calories</dt><dd class="card__nutrition-value">${calories}</dd></div>
+            <div class="card__nutrition-item"><dt class="card__nutrition-name">Carbs</dt><dd class="card__nutrition-value">${carbs}</dd></div>
+            <div class="card__nutrition-item"><dt class="card__nutrition-name">Protein</dt><dd class="card__nutrition-value">${protein}</dd></div>
+            <div class="card__nutrition-item"><dt class="card__nutrition-name">Fat</dt><dd class="card__nutrition-value">${fat}</dd></div>
+          </dl>
+        </div>
+      </div>`;
+
+    // Добавляем новый рецепт внутрь контейнера, чтобы не ломать страницу
+    const container = document.getElementById('recipes-container');
+    if (container) {
+      container.appendChild(newCard);
+    } else {
+      // Если контейнера нет — просто в body (на всякий случай)
+      document.body.appendChild(newCard);
+    }
+
+    // Можно очистить форму после добавления, если нужно
+    // document.getElementById('recipeForm').reset();
+  };
+
+  if (img) {
+    reader.readAsDataURL(img);
+  } else {
+    alert('Пожалуйста, выберите изображение для рецепта!');
+  }
+}
+
+  </script>
+</body>
 </html>
