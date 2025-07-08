@@ -1,5 +1,3 @@
-Вот вариант с ссылкой на превью JPG, который можно вставить в README вашего форка:
-
 ---
 
 ## What I Added / Fork Improvements
