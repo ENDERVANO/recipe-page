@@ -17,5 +17,3 @@ This feature enables users to create and view custom recipes seamlessly within t
 ![Design preview for the Recipe page coding challenge](./preview.jpg)
 
 ---
-
-Если нужно, могу помочь оформить под конкретный раздел README или добавить что-то ещё.
